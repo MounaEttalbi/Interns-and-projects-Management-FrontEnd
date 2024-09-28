@@ -1,0 +1,560 @@
+.dashboard {
+  display: flex;
+  width: 100%;
+  min-height: 100vh; /* Assure que le conteneur prend au moins la hauteur de l'écran */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed; /* Fix the sidebar position */
+  top: 0;
+  left: 0;
+  width: 18%;
+  height: 100%;
+  background: #ffffff; /* White background */
+  box-shadow: 1px 0px 4px #fcf7f7; /* Grey shadow */
+  padding: 0.3rem;
+  overflow: auto;
+}
+
+/* Logo and Title Styles */
+.sidebar .logoDiv {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem 0;
+  cursor: pointer;
+  
+}
+
+.sidebar .logoDiv img {
+  width: 50px; /* Adjusted size */
+  margin-right: 2rem;
+  background: rgba(233, 32, 206, 0.1); /* Light pink background */
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+.sidebar .logoDiv h2 {
+  font-size: 1.5rem; /* Adjusted font size for title */
+  color: #7e6f71; /* Dark color for title */
+}
+
+/* Menu Styles */
+.sidebar .menuDiv,
+.sidebar .settingsDiv {
+  margin-top: 1.3rem;
+ 
+}
+//µµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµ
+.settingsDiv .menuLink,
+.menuLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff; /* Default text color */
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    color: #ffffff; /* Text color on hover or focus */
+    background-color: rgb(83, 163, 229); /* Background color on hover or focus */
+    border-radius: 5px; /* Optional: add border radius for a rounded background */
+  }
+}
+
+
+
+
+
+
+
+
+.sidebar .menuLists {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .menuLists .listItem {
+  margin-bottom: 0.5rem;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    width: 5px;
+    bottom: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: transparent; /* Default color */
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: #0babe1; /* Color on hover or focus */
+  }
+}
+
+.sidebar .menuLink {
+  
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #af1d1d; /* Default text color */
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    color: #3745e3; /* Text color on hover or focus */
+    background-color: #000000; /* Background color on hover or focus */
+    border-radius: 5px; /* Optional: add border radius for a rounded background */
+  }
+}
+
+.sidebar .menuLink .icon {
+  margin-right: 0.3rem;
+  
+}
+
+/* Settings Styles */
+.sidebar .settingsDiv {
+  margin-top: 1.5rem;
+  
+}
+
+.sidebar .settingsDiv .divTitle,
+.sidebar .menuDiv .divTitle {
+  font-size: 1.2rem; /* Adjusted font size */
+  color: #e28e8e; /* Color for titles */
+  padding: 0 0.5rem 0.5rem;
+}
+
+.sidebar .settingsDiv .menuLists .listItem,
+.sidebar .menuDiv .menuLists .listItem {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .settingsDiv .menuLink,
+.sidebar .menuLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #c14f4f; /* Default text color */
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    color: #050505; /* Text color on hover or focus */
+    background-color: rgb(0, 0, 0); /* Background color on hover or focus */
+    border-radius: 5px; /* Optional: add border radius for a rounded background */
+  }
+}
+
+.sidebar .settingsDiv .menuLink .icon,
+.sidebar .menuLink .icon {
+  margin-right: 0.3rem;
+  
+}
+
+/* Adjustments for Grid Layout */
+.sidebar.grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.sidebar .menuDiv.grid,
+.sidebar .settingsDiv.grid {
+  display: grid;
+}
+
+.dashboardContainer {
+  background-color: black; /* Background color for the dashboard container */
+  height:inherit;
+
+}
+
+img {
+  width: 50px; /* Adjusted size */
+}
+
+.menuLink {
+  color: rgb(251, 251, 251);
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-bottom: -8px;
+}
+
+
+.divTitle {
+  margin-top: 4px;
+  font-size: 1.2rem; /* Adjusted font size */
+  font-weight: 500;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Text color must be transparent to show gradient */
+  background-clip: text;
+  font-weight: 800;
+  color: transparent; /* Ensure text color is transparent for non-WebKit browsers */
+}
+
+h2 {
+  font-size: 1.3rem; /* Adjusted font size */
+  background: linear-gradient(90deg, #1398d5, #6c2efd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Text color must be transparent to show gradient */
+  background-clip: text;
+  
+}
+
+.sideBarCard {
+  width: 100%;
+  padding: 0rem;
+  text-align: center;
+  position: relative;
+
+  .icon {
+    position: absolute;
+    background: rgb(82, 10, 238);
+    font-size: 2rem; /* Adjusted size */
+    border-radius: 50%;
+    top: -8px;
+    right: 50%;
+    color: white;
+    transform: translate(50%);
+    z-index: 100;
+    margin-top: 18px;
+    margin-right: -1.5rem;
+  }
+
+  .cardContent {
+    position: relative;
+    padding: 0rem;
+    background: rgb(80, 75, 227);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 23px;
+    margin-right: -2rem;
+    margin-left: 1rem;
+      border: #f09621;
+
+    h3 {
+      font-size: 1rem; /* Adjusted font size */
+      margin-top: 1rem;
+      padding: 1rem 0;
+      font-weight: 800;
+      color: rgb(254, 249, 249);
+    }
+
+    p {
+      font-size: small;
+      margin-top: 0px;
+      font-weight: 500;
+      color: white;
+    }
+
+    .btn {
+      position: relative;
+      color: #000000;
+      z-index: 1000;
+      font-size: small;
+    }
+    .btn:hover{
+      background-color: rgb(183, 65, 226);
+    }
+
+    .circle1, .circle2{
+      position: relative;
+      background: red;
+      border-radius: 50%;
+      opacity: -7;
+    }
+
+  }
+
+ 
+}
+
+#parthelp{
+  margin-top: -22px;
+}
+.icons{
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+
+.title{
+  margin-left: -120px;
+  margin-bottom: 2rem;
+}
+
+.titl{
+  margin-left: -150px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.mainContent {
+  flex: 1; /* Prend tout l'espace restant */
+  display: flex;
+  flex-direction: column;
+  
+}
+.bthelp{
+  color: black;
+  background-color: white;
+  margin-bottom: 3px;
+}
+.bthelp:hover{
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+//=================================================  top  ===========================================================
+/* Top Bar Styles */
+.top-Bar {
+  width: 81%;
+  height: 60px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 17%;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 5px 1px 8px #0e0606; 
+}
+.notification-Container{
+  margin-right: -760px;
+}
+/* Sidebar Styles */
+.sidebar {
+  position: fixed; /* Fix the sidebar position */
+  top: 60px; /* Adjust the top position to account for the top bar */
+  left: 0;
+  width: 18%;
+  height: calc(100% - 60px); /* Adjust the height to account for the top bar */
+  background: #ffffff; /* White background */
+  box-shadow: 1px 0px 4px #fcf7f7; /* Grey shadow */
+  padding: 0.3rem;
+  overflow: auto;
+}
+.bottom {
+  flex: 1; /* Prend tout l'espace restant */
+  padding-left: 13rem;
+  overflow: auto; /* Assure que le contenu défile si nécessaire */
+}
+.mainContent{
+  width: 100%;
+}
+
+/* ************Logout style****** */
+.logoutConfirmation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s;
+  font-size: 18px;
+
+  .confirmationBox {
+    background: white;
+    padding: 50px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: scaleIn 0.3s;
+
+    p {
+      margin-bottom: 38px;
+    }
+
+    button {
+      margin: 0 30px;
+      padding: 10px 40px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:first-of-type {
+        background: #4aaa52;
+        color: white;
+
+        &:hover {
+          background: #2fac82;
+        }
+      }
+
+      &:last-of-type {
+        background: #eb3838;
+        color: rgb(255, 255, 255);
+
+        &:hover {
+          background: #e4786a;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+/* Dashboard.scss */
+
+.notificationContainer {
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  z-index: 1000;
+  margin-left: -80px;
+}
+
+.notifications-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.notifications-icon span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5em;
+  font-size: 0.75em;
+}
+
+/********************************************Theme************************/
+.dashboard.light .sideBar,
+.dashboard.light .top-Bar {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dashboard.dark .sideBar,
+.dashboard.dark .top-Bar {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.themeToggleBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+}
+
+
+//*************************************/
+.notificationAdminContainer {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  .bellIconAdmin {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    margin-left: 700px;
+
+    &:hover {
+      color: #ffffffc9;
+    }
+  }
+
+  .notificationCountAdmin {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .notificationsListAdmin {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 360px;
+    max-height: 1400px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: none;
+    
+  
+
+    &.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+      
+    }
+  }
+}
+.notification {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.notification.read {
+  background-color: #f0f0f0;
+}
+
+.notification.unread {
+  background-color :rgba(255, 255, 255, 0.651);
+  color: rgb(0, 0, 0);
+  border-radius: 50px;
+  font-size:16px;
+  border: 1.2px solid #9f57dae1;
+}

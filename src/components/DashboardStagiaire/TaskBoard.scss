@@ -1,0 +1,241 @@
+.task-board {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #d2b2f7f3; 
+ background: url('../../assets/chatbg1.jpg') no-repeat center center fixed;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  margin-left: 50px;
+  width:100%;
+  
+}
+
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #fdfdfde8;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffff; // Fond blanc
+  box-shadow: 0 0 10px rgba(184, 186, 187, 0.589);
+ 
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 99%;
+  padding: 10px;
+  border: 1px solid #dfe1e6; /* Bordure douce */
+  border-radius: 6px;
+  background-color: #f7f4fa; /* Légèrement gris pour les champs */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transition douce */
+}
+
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus {
+  border-color: #0d9ef1;
+  box-shadow: 0 0 8px rgba(158, 160, 161, 0.3); /* Ombre bleue douce */
+  outline: none; /* Retire le contour par défaut */
+}
+
+.taskFormBtn {
+  background-color: #130e5c; /* Couleur verte */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  gap: 5px;
+  width: 700px;
+  margin-left: 150px;
+  text-align: center;
+}
+
+
+.taskFormBtn:hover {
+  background-color: #4c92ee; // Bleu foncé au survol
+}
+
+.task-columns {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.task-column {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;// Fond gris clair
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(243, 238, 162, 0.555); // Ombre douce
+  border: 1px solid #dfe1e6;
+  
+}
+
+.task-card {
+ // background-color: #ffffff; // Fond blanc
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(9, 30, 66, 0.15); // Ombre douce
+}
+
+.task-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #000000; // Couleur de texte sombre similaire à Jira
+  font-weight: 900px;
+}
+
+.task-card p {
+  margin: 5px 0;
+  color: #000000; // Texte secondaire gris foncé
+  
+}
+
+.task-actions9 {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.task-actions9 {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  //color: #0052cc; // Texte d'action en bleu Jira
+  .editTask9{
+    color: rgb(28, 42, 241);
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .editTask9:hover{
+    color: #2184f5;
+  }
+  .deleteTask9{
+    color: rgb(219, 20, 20);
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 45px;
+  }
+  .deleteTask9:hover{
+    color: #df5a5a;
+  }
+}
+
+.task-actions9 button:hover {
+  color: #0747a6; // Survol en bleu foncé
+}
+
+.modal-overlayTask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay sombre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalTask {
+  background-color: rgb(255, 252, 252);
+  padding: 40px; /* Padding plus grand pour une meilleure présentation */
+  box-shadow: 0 0 10px rgba(9, 30, 66, 0.25); /* Ombre douce pour la modale */
+  border-radius: 16px; /* Bords arrondis pour une apparence plus moderne */
+  width: 360px;
+  text-align: center;
+  color: rgb(50, 52, 54); /* Couleur du texte inspirée de l'exemple */
+}
+
+.modal-contentTask {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacement entre les champs */
+}
+
+.modal-contentTask input,
+.modal-contentTask textarea,
+.modal-contentTask select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  background-color: #fafbfc; /* Champ légèrement gris */
+}
+.modal-contentTask input:hover,
+.modal-contentTask textarea:hover,
+.modal-contentTask select:hover {
+  border-color: #2684ff; /* Bleu vif, inspiré de Jira */
+}
+
+
+.modal-buttonGroupTask {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirm-btnTask {
+  background-color: #0877c2; /* Bleu Jira */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-btnTask:hover {
+  background-color: #6798e0; /* Survol bleu foncé */
+}
+
+.cancel-btnTask {
+  background-color: #e41e1e; /* Bouton rouge pour annuler */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btnTask:hover {
+  background-color: #f78181; /* Rouge plus clair au survol */
+}
+
+
+/********************************************/
+.task-card.to_do {
+  background-color: #fbfd70; /* Rose */
+  border: 1px solid #f0d98dfd;
+}
+
+.task-card.in_progress {
+  background-color: #66d7f3; /* Bleu */
+  border: 1px solid #6cd0ec;
+}
+
+.task-card.done {
+  background-color: #fca8d2; /* Vert */
+  border: 1px solid #eb6bb6;
+}
+
+.updatetask9{
+  background-color: #5ac910;
+}
+.updatetask9:hover{
+  background-color: #a1fc65;
+}
+.canceltask9{
+  background-color: rgb(0, 102, 255);
+}

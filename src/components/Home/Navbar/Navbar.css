@@ -1,0 +1,101 @@
+.header {
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.219);
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background 0.3s ease;
+    transform: translateY(0); /* Initial position */
+}
+
+.header.hidden {
+    transform: translateY(-100%); /* Move navbar out of view */
+}
+
+.header:hover {
+    background: rgba(161, 159, 161, 0.247);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    
+    margin-top: -11px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #7a5ec9, #0e2149);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 550;
+    gap: 60px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.nav-menu li a {
+    cursor: pointer;
+    transition: color 0.2s ease;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-menu li a:hover {
+    color: #0e2149;
+}
+
+.nav-cnx {
+    border-radius: 50px;
+    padding: 8px 20px;
+    background: #03030309;
+    color: #ffffff;
+    transition: background 0.1s ease;
+    border: 1.5px solid #ccf5bc;
+    border-color: #09e22e;
+    box-shadow: 0 0 9px rgba(66, 241, 13, 0.3); /* Ombre bleue douce */
+    outline: none; /* Retire le contour par défaut */
+    cursor: pointer;
+}
+
+.nav-cnx:hover {
+    border-color: #09e22e;
+    box-shadow: 0 0 9px rgba(66, 241, 13, 0.3); /* Ombre bleue douce */
+    outline: none; /* Retire le contour par défaut */
+    background-color: #40f55e;
+}

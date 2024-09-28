@@ -1,0 +1,178 @@
+.mainContentListing {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .statistics {
+    margin-bottom: 30px;
+  }
+  
+  .statistics h2 {
+    border-bottom: 1px solid rgba(192, 188, 188, 0);
+    padding-bottom: 10px;
+    
+  }
+  
+
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  
+    thead {
+      background-color: rgb(17, 118, 233);
+      color: white;
+    }
+  
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+  
+    th {
+      font-weight: bold;
+    }
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  
+    &:focus {
+      outline: none;
+      border-color: #4caf50;
+    }
+  }
+  
+/* Listing.scss */
+
+  
+ canvas{
+    width: 100%;
+    max-width:50%;
+    height: 20%;
+ }
+  
+  
+ 
+  .statistics-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .stat-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+  }
+  
+  .stat-card h3 {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+  }
+  
+  .stat-card p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    color: white;
+  }
+  
+  #statistics {
+    padding: 20px;
+  }
+  
+  #interns {
+    padding: 20px;
+  }
+ 
+/* Listing.scss */
+.chart {
+    display: flex;
+    justify-content: space-around; /* ou space-between, selon votre préférence */
+    align-items: center;
+    margin-left: -7rem; /* Ajustez la marge selon vos besoins */
+   
+    
+}
+  
+  #projectStatusChart, #internPerformanceChart {
+    width: 50%; /* Ajustez la largeur selon vos besoins */
+    max-width: 600px; /* Limite maximale pour éviter de dépasser l'écran */
+    height: auto; /* Assure que la hauteur est proportionnelle à la largeur */
+    max-height: 400px;
+    
+  }
+  //---------------------
+  .stat-card1 {
+    background-color: #f37847;
+  }
+  .stat-card2 {
+    background-color: #e7d42b;
+  }
+  .stat-card3 {
+    background-color: #1aee44;
+  }
+  .stat-card4 {
+    background-color: #135d88;
+  }
+  .stat-card5 {
+    background-color: #7c84f3;
+  }
+  .stat-card6 {
+    background-color: #7a4cbb;
+  }
+  .stat-card7 {
+    background-color: #cf2aa9;
+  }
+  .stat-card8 {
+    background-color: #e7a753;
+  }
+
+
+  #link a{
+    color:black;
+  }
+
+  button {
+    background-color: #57cc3a; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprimer la bordure par défaut */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 7px 10px; /* Espacement intérieur (haut-bas, gauche-droite) */
+    font-size: 13px; /* Taille de la police */
+    font-weight: bold; /* Poids de la police */
+    cursor: pointer; /* Changer le curseur en main lors du survol */
+    transition: background-color 0.3s ease; /* Effet de transition pour le changement de couleur */
+  }
+
+  button:hover {
+    background-color: #45a049; /* Couleur de fond lors du survol */
+  }
+  
+  button:active {
+    background-color: #388e3c; /* Couleur de fond lors du clic */
+  }
+
+  .stat-card {
+    display: block;
+    align-items: center;
+  }
+  
+  .stat-icon {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #ffffff;
+  }
+  

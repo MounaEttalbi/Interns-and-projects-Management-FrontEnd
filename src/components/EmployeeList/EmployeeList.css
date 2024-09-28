@@ -1,0 +1,258 @@
+/* Conteneur principal */
+.tabEmp {
+    padding: 0; /* Correction du padding */
+    margin: 0 auto; /* Centrer horizontalement */
+    max-width: 1800px;
+    background-color: #ffffff; /* Ajoutez un fond pour vérifier la visibilité */
+    border: 1px solid rgb(255, 255, 255); /* Ajoutez une bordure pour vérifier la visibilité */
+     /* Positionnement relatif pour aligner le contenu */
+    margin-top: -100px; /* Positionner le conteneur en haut de la page */ 
+    margin-left: 150px;
+  }
+  
+  /* Titre */
+  .titleEmp1 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    font-size: 2em;
+    color: rgb(6, 13, 107);
+    font-weight: 700;
+  }
+  
+  /* Tableau */
+  .tableEmp {
+    width: 800px;
+    border-collapse: collapse;
+    margin: 0 auto; /* Centrer le tableau horizontalement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background-color: #f4f4f4;
+    width: 800px;
+  }
+  
+  .titleEmp2 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(6, 13, 107);
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #5677e4;
+    width: 800px;
+  }
+  
+ 
+  
+  tbody tr:hover {
+    background-color: #eaf0f09f;
+  }
+  
+  /* Responsivité */
+  @media (max-width: 868px) {
+    table {
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 8px;
+    }
+  }
+  
+  /* Couleurs des icônes d'action */
+.actionIcon {
+  margin: 0 5px;
+  cursor: pointer;
+  width: 18px;
+}
+
+.actionEdit {
+  color: rgb(14, 105, 190);
+}
+
+.actionDelete {
+  color: rgb(252, 66, 66);
+}
+
+.actionView {
+  color: rgb(0, 0, 0);
+}
+
+/* Responsivité */
+@media (max-width: 868px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  animation: animatetop 0.4s;
+  border-radius: 14px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+form label {
+  margin-bottom: 10px;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+form button {
+  padding: 10px;
+  border: none;
+  background-color: #4ebe2b;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  
+}
+
+form button:hover {
+  background-color: #c28efd;
+}
+
+/************************************Delete Confirmation**********************/
+.modal-overlaye {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.603);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-containere {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: rgb(50, 52, 54);
+
+}
+
+.modal-buttonse {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.confirm-buttone {
+  background: #fd3030;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.confirm-buttone:hover{
+  background-color: #ff8181;
+}
+
+.cancel-buttone {
+  background: #64f747;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.cancel-buttone:hover{
+  background-color: #9ee688;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/*************************SEARCH******************/
+
+.searchContainerEmp {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: 77px;
+}
+
+.searchBarEmp {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdbabaab;
+  border-radius: 50px;
+  padding-right: 10px; /* Ajoutez de l'espace pour l'icône */
+}
+.searchBarEmp:hover{
+  border-color: #0d9ef1;
+  box-shadow: 0 0 8px rgba(13, 158, 241, 0.3); /* Ombre bleue douce */
+  outline: none; /* Retire le contour par défaut */
+}
+
+.searchIconEmp {
+  width: 50px;
+  right: 10px;
+  color: #5a5757;
+  cursor: pointer;
+  margin-left: -50px;
+}

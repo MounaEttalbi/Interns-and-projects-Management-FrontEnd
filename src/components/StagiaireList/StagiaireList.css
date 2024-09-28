@@ -1,0 +1,271 @@
+/* Conteneur principal */
+.tabStag {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1800px;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 0px;
+  margin-left: 80px;
+  background-color: rgb(255, 255, 255);
+  width: 1000px;
+}
+
+/* Titre */
+.titleStag1 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: 60px;
+  font-size: 2em;
+  color: rgb(6, 13, 107);
+  font-weight: 700;
+}
+
+/* Tableau */
+table {
+  width: 1000px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+}
+
+thead {
+  background-color: #f4f4f4;
+  width: 800px;
+}
+
+.titleStag2 {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  background-color:rgb(6, 13, 107)
+  
+}
+
+th, td {
+  padding: 40px;
+  text-align: left;
+  border-bottom: 1px solid #b62bec;
+  width: 800px;
+}
+
+tbody tr:hover {
+  background-color: #eaf0f09f;
+}
+
+/* Couleurs des icônes d'action */
+.actionIconS {
+  margin: 0 5px;
+  cursor: pointer;
+  width: 14px;
+}
+
+.actionEdits {
+  color: rgb(5, 105, 172);
+}
+
+.actionDeletes {
+  color: rgb(252, 66, 52);
+}
+
+.actionViews {
+  color: rgb(0, 0, 0);
+}
+
+/* Responsivité */
+@media (max-width: 868px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+/* ***************************************************Formulaire d'édition UPDATE*********************** */
+.editFormContainer {
+  background-color: #f3eded;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-top: -10px;
+}
+
+.editFormTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #7f0c96;
+  font-weight: 700;
+}
+
+.editForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.editForm input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formButtons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formButtons button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.formButtons button[type="button"] {
+  background-color: #f44336;
+  color: white;
+}
+
+/* *********************************Formulaire de visualisation******************** */
+/* Modal */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.modalContent {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  width: 80%;
+  max-width: 600px;
+  animation: fadeIn 0.3s ease-in-out;
+  border-radius: 12px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.closeButton {
+  color: #6b0707;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  color: rgb(248, 62, 62);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/****************************************Delete Confermation******************/
+
+.modal-overlayo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-containero {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  width: 360px;
+  color: rgb(50, 52, 54);
+}
+
+.modal-buttonso {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.confirm-btno {
+  background-color: #e41e1e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.confirm-btno:hover{
+  background-color: #f78181;
+}
+
+.cancel-btno {
+  background-color: #09cc54;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cancel-btno:hover{
+  background-color: #7bf5aa;
+}
+/*************************SEARCH******************/
+
+.searchContainerS {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: 77px;
+}
+
+.searchBarS {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdbabaab;
+  border-radius: 50px;
+  padding-right: 10px; /* Ajoutez de l'espace pour l'icône */
+}
+.searchBarS:hover{
+  border-color: #0d9ef1;
+  box-shadow: 0 0 8px rgba(13, 158, 241, 0.3); /* Ombre bleue douce */
+  outline: none; /* Retire le contour par défaut */
+}
+
+.searchIconS {
+  width: 50px;
+  right: 10px;
+  color: #5a5757;
+  cursor: pointer;
+  margin-left: -50px;
+}

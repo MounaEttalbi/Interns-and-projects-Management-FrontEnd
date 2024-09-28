@@ -1,0 +1,175 @@
+/* InternProfile.scss */
+
+.profilecontainer {
+    background: url('../../assets/chatbg1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    margin-left: 50px;
+  }
+  
+  .profileheader {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .profileinfo {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: -290px;
+    margin-bottom: 25px;
+  }
+  
+  .profileinfo p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .editcontainerS {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+.editcontainerS input[type="text"], 
+.editcontainerS input[type="email"], 
+.editcontainerS input[type="password"] 
+  {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .buttoncontainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+ 
+  
+  .btneditintern {
+    background: #3cb941;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 200px;
+  }
+  .btneditintern:hover {
+    background: #7de681;
+  }
+  
+  .btnsave {
+    background: #0aa825;
+  }
+  .btnsave:hover {
+    background: #53dd6a;
+  }
+  
+  .btncancel {
+    background: #f44336;
+  }
+  .btncancel:hover {
+    background: #fd6d6d;
+  }
+  
+ 
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  /* Modal Overlay */
+.modal-overlayIntern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Ombre semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Assure que la modale est au-dessus du contenu */
+
+}
+
+/* Modal Content */
+.modal-contentIntern {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-left: 180px;
+  margin-bottom: -26px;
+}
+
+.modal-contentIntern h2 {
+  margin-top: 0;
+}
+
+.buttoncontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btnsave, .btncancel {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btnsave {
+  background: #0aa825;
+}
+
+.btnsave:hover {
+  background: #53dd6a;
+}
+
+.btncancel {
+  background: #f44336;
+}
+
+.btncancel:hover {
+  background: #fd6d6d;
+}

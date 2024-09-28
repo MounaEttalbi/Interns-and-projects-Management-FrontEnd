@@ -1,0 +1,91 @@
+.history {
+  padding: 40px;
+  background-image: 
+    linear-gradient(90deg, #000000, #070708bd), /* Dégradé */
+    url('../../assets/chatbg1.jpg'); /* Remplacez par le chemin réel de votre image */
+  background-size: cover; /* Assure que l'image couvre toute la surface */
+  background-position: center; /* Centre l'image dans le conteneur */
+  background-repeat: no-repeat; /* Évite la répétition de l'image */
+  background-blend-mode: overlay; /* Fusionne l'image et le dégradé */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 2000px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+  width: 1020px;
+  color: rgb(0, 0, 0);
+  font-size: large;
+  margin-left: 48px;
+
+
+  .historyAdmin {
+    margin-bottom: 30px;
+    font-weight: 800;
+    color: #000000;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 16px;
+    border-bottom: 1px solid #080b0e52;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: #050408;
+      transform: translateX(10px);
+      color: #ffffff;
+    }
+
+    .deleteButton {
+      background: none;
+      border: none;
+      color: #f84632;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #a32517;
+      }
+    }
+
+    .actionType, .entity, .timestamp, .description {
+      margin-right: 10px;
+    }
+
+    .timestamp {
+      color: #44cc0f;
+      font-weight: 500;
+      font-size: 16px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,66 @@
+.features-container {
+    padding: 50px;
+    background: linear-gradient(145deg, #6f45e1ce, #000000);
+    border-top: 1px solid #100f11b2;
+    border-bottom: 1px solid #2e2d2d;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.features-container h6 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ffffff;
+    margin-top: 8px;
+}
+
+.features-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-container ul li {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacement entre l'icône et le texte */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    margin-left: 300px;
+}
+
+.features-container ul li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.features-container ul li strong {
+    color: #3cf2ff;
+    font-weight: 1000;
+}
+
+.feature-icon1 {
+    font-size: 2em;
+    color: #27c2ff; /* Vous pouvez changer la couleur des icônes ici */
+}
+.feature-icon2 {
+    font-size: 2em;
+    color: #fcca9c; /* Vous pouvez changer la couleur des icônes ici */
+}
+.feature-icon3 {
+    font-size: 2em;
+    color: #158865; /* Vous pouvez changer la couleur des icônes ici */
+}
+.feature-icon4 {
+    font-size: 2em;
+    color: #d8b90c; /* Vous pouvez changer la couleur des icônes ici */
+}
+.feature-icon5 {
+    font-size: 2em;
+    color: #f2ffef; /* Vous pouvez changer la couleur des icônes ici */
+}

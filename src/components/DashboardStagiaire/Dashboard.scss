@@ -1,0 +1,73 @@
+.dashboard-stagiaireI {
+    padding: 20px;
+    background-color: #ffffff;
+    margin-left: 50px;
+    width: 1024px;
+
+    .taskdistribution {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+        margin-right: 190px;
+        font-weight: 700;
+    }
+
+    .statisticsIntern {
+        display: flex;
+        flex-wrap: wrap; // Permet aux cartes de passer à la ligne suivante si nécessaire
+        justify-content: space-between; // Aligne les cartes horizontalement avec espace entre elles
+        margin-bottom: 30px;
+
+        .stat-card {
+            border-radius: 8px;
+            padding: 18px;
+            text-align: center;
+            width: 10%; // Ajuste la largeur des cartes pour les aligner horizontalement
+            color: #fff; // Texte en blanc pour contraster avec les couleurs de fond
+
+            // Couleurs de fond différentes pour chaque carte
+            &.total {
+                background-color: #b5ff2c; // Bleu
+            }
+
+            &.done {
+                background-color: #57a0f3; // Vert
+            }
+
+            &.inProgress {
+                background-color: #ef9ffa; // Jaune
+            }
+
+            &.toDo {
+                background-color: #f78383; // Rouge
+            }
+
+            .TotalTask{
+                margin-bottom: 10px;
+                font-size: 18px;
+                color: rgb(255, 255, 255);
+            }
+
+            p {
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .chartsIntern {
+        display: flex;
+        flex-wrap: wrap; // Permet aux graphiques de passer à la ligne suivante si nécessaire
+        justify-content: space-between; // Aligne les graphiques horizontalement avec espace entre eux
+        margin-bottom: 30px;
+        margin-left: 100px;
+
+        .chartIntern {
+            flex: 1; // Ajuste automatiquement la largeur des graphiques
+            max-width: 50%; // Fixe une largeur maximale pour les graphiques
+            margin: 0 10px; // Ajoute un espace entre les graphiques
+            padding: 10px; // Ajoute un padding autour des graphiques
+            box-sizing: border-box; // Inclut le padding dans la largeur totale
+        }
+    }
+}

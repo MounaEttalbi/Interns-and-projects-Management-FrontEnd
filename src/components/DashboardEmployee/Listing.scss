@@ -1,0 +1,127 @@
+.mainContentListing {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  
+    thead {
+      background-color: rgb(100, 8, 136);
+      color: white;
+    }
+  
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+  
+    th {
+      font-weight: bold;
+    }
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  
+    &:focus {
+      outline: none;
+      border-color: #4caf50;
+    }
+  }
+  .statistics-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .stat-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+  }
+  
+  .stat-card h3 {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+  }
+  
+  .stat-card p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    color: white;
+  }
+  
+  #statistics {
+    padding: 20px;
+  }
+  
+  #interns {
+    padding: 20px;
+  }
+ 
+  
+  //---------------------
+  .stat-cad1 {
+    background-color: #61da67;
+  }
+  .stat-cad2 {
+    background-color: #2bdfd6;
+  }
+  .stat-cad3 {
+    background-color: #fd7944;
+  }
+  .stat-cad4 {
+    background-color: #e970a8;
+  }
+  .stat-cad5 {
+    background-color: #da5eeb;
+  }
+  .stat-cad6 {
+    background-color: #f58b12;
+  }
+  .stat-cad7 {
+    background-color: #6345e9;
+  }
+  .stat-cad8 {
+    background-color: #bee21a;
+  }
+
+
+  #link a{
+    color:black;
+  }
+
+  button {
+    background-color: #4caf50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprimer la bordure par défaut */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 7px 10px; /* Espacement intérieur (haut-bas, gauche-droite) */
+    font-size: 13px; /* Taille de la police */
+    font-weight: bold; /* Poids de la police */
+    cursor: pointer; /* Changer le curseur en main lors du survol */
+    transition: background-color 0.3s ease; /* Effet de transition pour le changement de couleur */
+  }
+
+  button:hover {
+    background-color: #45a049; /* Couleur de fond lors du survol */
+  }
+  
+  button:active {
+    background-color: #388e3c; /* Couleur de fond lors du clic */
+  }

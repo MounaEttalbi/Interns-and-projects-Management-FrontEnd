@@ -1,0 +1,123 @@
+// Container
+.reportcontainer {
+    //max-width: 2000px;
+    
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto; // Ajouter un défilement vertical si nécessaire
+    margin-left: 80px;
+    background: linear-gradient(to right, #d8eaee8a, #e5d4f573); // Gradient pour le fond
+    width: 1600px;
+    margin-right: 20px;
+    margin-left: 60px;
+    padding-right: 60px;
+}
+
+// Grid Layout
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsif */
+    gap: 20px;
+    width: 100%;
+    padding: 10px; // Padding pour l'espacement interne
+    background-color: #d9ffc3; // Couleur de fond pour la grille
+    background-image: url('../../assets/chatbg1.jpg'); // Image en arrière-plan
+    background-size: cover; // Ajuster l'image pour couvrir toute la grille
+    background-position: center; // Centrer l'image dans la grille
+    background-repeat: no-repeat; // Éviter la répétition de l'image
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Ombre douce autour de la grille
+}
+
+// Card Style
+.report-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; // Prend toute la largeur disponible
+    max-width: 280px; // Largeur maximale
+    overflow: hidden; // Masquer le débordement
+    position: relative; // Pour les animations
+    cursor: pointer; // Changer le curseur au survol
+}
+
+.report-card:hover {
+    transform: translateY(-10px); // Déplacement lors du survol
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Ombre plus profonde
+    background-color: rgba(242, 209, 255, 0.705);
+}
+
+// Title Style
+.report-title {
+    font-size: 1.5rem; // Taille de police plus grande
+    margin-bottom: 10px;
+    color: #050655;
+    font-weight: 600; // Texte en gras
+    transition: color 0.3s ease;
+    
+}
+
+.report-title:hover {
+    color: #007bff; // Changer la couleur au survol
+}
+
+// Team Member Style
+.report-team-member {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+    font-style: italic; // Style italique
+}
+
+// Status Style
+.report-status {
+    margin-bottom: 15px;
+}
+
+.report-status select {
+    padding: 8px; // Augmenter le padding
+    font-size: 1rem;
+    border-radius: 4px; // Coins arrondis
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.report-status select:focus {
+    border-color: #007bff; // Couleur de bordure au focus
+}
+
+// Download Link Style
+.report-download {
+    margin-top: 15px;
+}
+
+.downloadLink {
+    text-decoration: none;
+    color: #29831d;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.downloadLink:hover {
+    color: #0056b3;
+    transform: scale(1.05); // Légère augmentation au survol
+}
+
+.download-icon {
+    margin-right: 8px;
+    font-size: 1.5rem; // Taille de l'icône augmentée
+}
+
+.employeeReportsTitle{
+    font-family:fantasy;
+    font-size: 24px;
+    font-weight: 100;
+    color: #0056b3;
+}
+
+

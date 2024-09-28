@@ -1,0 +1,167 @@
+.reportingContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #dad8d4;
+  background-image: url('../../assets/chatbg1.jpg'); /* Remplacez par le chemin de votre image */
+  background-size: cover; /* Assure que l'image couvre tout l'arrière-plan */
+  background-position: center; /* Centre l'image dans le conteneur */
+  width: 1200px;
+  height: 570px; /* Ajustez la hauteur selon vos besoins */
+  border-radius: 10px; /* Optionnel : arrondir les coins du conteneur */
+  
+  margin-top: -20px;
+  
+}
+
+.leftColumn {
+  background-color: #fcfcfc;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 790px;
+  width: 200px;
+}
+
+.rightColumn {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: -1100px;
+  margin-right: 600px;
+  width: 680px;
+  padding-bottom: -650px;
+}
+
+.FinalProject {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: rgb(12, 38, 187)c1c;
+  font-weight: 800;
+}
+
+.reportCard {
+  background: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 230px;
+  margin-left: -20px;
+}
+
+.myReports{
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  color: #000000;
+  font-weight: 800;
+  margin-top: -30px;
+}
+
+.reportCard p {
+  margin: 5px 0;
+  color: #000000;
+  font-size: 14px;
+}
+
+.reportingForm {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #1b1a1a;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.formGroup input:hover,
+.formGroup textarea:hover,
+.formGroup select:hover {
+ border-color: #007bff;
+}
+.formGroup input[type="file"] {
+  padding: 3px;
+}
+
+.submitButton {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.reportStatus {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.report-download2 {
+  margin-top: 15px;
+  margin-left: -24px;
+}
+
+.downloadLink2 {
+  text-decoration: none;
+  color: hsl(244, 82%, 48%);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+}
+
+.downloadLink2:hover {
+  color: #98d426;
+}
+
+.download-icon2 {
+  margin-right: 8px;
+  font-size: 1.25rem;
+}
+
+.statuscolor {
+  font-weight: bold;
+}
+
+.statuscolor.validated {
+  color: rgb(16, 175, 16);
+}
+
+.statuscolor.rejected {
+  color: red;
+}
+
+.statuscolor.on-progress {
+  color: blue;
+}
+
+.statuscolor.sented {
+  color: rgb(189, 51, 207);
+}

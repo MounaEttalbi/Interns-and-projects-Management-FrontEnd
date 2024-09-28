@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:white;
+  margin-left: -400px;
+  margin-top: -40px;
+  position: fixed;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.38);
+  position: relative;
+  overflow: hidden;
+  width: 800px;
+  max-width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+  justify-content: center;
+}
+
+.container p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+
+.container span {
+  font-size: 12px;
+}
+
+.container a {
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+
+.container button {
+  background-color: #302153;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.container button.hidden {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.container form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  height: 100%;
+}
+
+.input-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: -1px;
+  position: relative;
+  width: 100%;
+}
+
+.input-div input,
+.input-div select {
+  width: 100%;
+  padding: 10px 15px 10px 60px; /* Augmenter le padding à gauche pour faire de la place pour l'icône */
+  border: 2px solid #fcfcfc;
+  border-radius: 8px;
+  background-color: #eee;
+  font-size: 16px;
+  color: #616060;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  font-weight: 400;
+}
+
+.input-div select {
+  padding-right: 30px; /* Space for the dropdown arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+  margin-bottom: 12px;
+}
+
+.input-div input:focus,
+.input-div select:focus {
+  border-color: #007bff;
+  background-color: #fff;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px; /* Position de l'icône à gauche à l'intérieur du champ */
+  top: 30%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  color: #202020;
+}
+
+.input-div label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 14px;
+  color: #666;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-div input:focus ~ label,
+.input-div select:focus ~ label,
+.input-div input:not(:placeholder-shown) ~ label,
+.input-div select:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #a96afc;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.container.active .sign-in {
+  transform: translateX(100%);
+}
+
+.sign-up {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+
+@keyframes move {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  border: 1px solid #4b0d85;
+  border-radius: 20%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  width: 40px;
+  height: 40px;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 57%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  border-radius: 150px 0 0 100px;
+  z-index: 1000;
+}
+
+.container.active .toggle-container {
+  transform: translateX(-100%);
+  border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+  background-color: #512da8;
+  height: 100%;
+  background: linear-gradient(145deg, #6f45e1ce, #000000);
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+.container.active .toggle {
+  transform: translateX(50%);
+}
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+  transform: translateX(-200%);
+}
+
+.container.active .toggle-left {
+  transform: translateX(0);
+}
+.toggle-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.active .toggle-right {
+  transform: translateX(200%);
+}
+
+.social-icons .fab.fa-google-plus-g {
+  color: rgb(170, 19, 19); /* Couleur spécifique pour l'icône Google Plus */
+}
+
+.social-icons .fab.fa-facebook-f {
+  color: rgb(7, 96, 212); 
+}
+
+.social-icons .fab.fa-linkedin-in {
+  color: rgb(7, 66, 143); 
+}
+
+.social-icons .fab.fa-github {
+  color: rgb(0, 0, 0);  
+}
+
+.forgot-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  position: relative; /* Assurez-vous que le z-index fonctionne */
+  z-index: 20; /* Valeur élevée pour s'assurer que le formulaire est au-dessus des autres éléments */
+
+
+  .forgot-password-link {
+    color: #2793f8;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .reset-password-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: -200px;
+    max-width: 300px;
+    height: 20rem;;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 4px 8px rgba(32, 5, 133, 0.273);
+    padding: 10px;
+    z-index: 1000; /* Valeur élevée pour être au-dessus */
+    position: fixed; /* Position fixe pour centrer */
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer le formulaire */
+  label{
+    font-size: 1.5rem;
+  }
+  h3{
+    font-size: 2rem;
+    color: #4b0d85;
+  }
+  }
+  .cancel-icon{
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 18rem;
+  }
+  
+}

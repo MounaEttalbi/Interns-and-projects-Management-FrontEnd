@@ -1,0 +1,142 @@
+.chatTeamcontainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #bbdbff; /* Couleur de fond */
+  font-family: 'Arial', sans-serif;
+  margin-left: 40px;
+  position: fixed;
+}
+
+
+.chatTeamheader {
+  background-color: #0d075e;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.chatTeambody {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.chatTeammessage {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  max-width: 80%;
+  
+}
+
+.own-message {
+  justify-content: flex-end;
+  color: #000000;
+  .message-content{
+    background-color: #c8f7a0;
+  }
+ 
+}
+
+.other-message {
+  justify-content: flex-start;
+  color: black;
+  .message-content{
+    background-color: #fcf2c5;
+  }
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.user-icon {
+  background-color: #ff0000;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.message-email {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-right: 10px;
+  
+}
+
+.message-content {
+  background-color: white;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  max-width: 100%;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.chatTeamfooter {
+  display: flex;
+  padding: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #ececec;
+  margin-bottom: 36px;
+  
+}
+
+.chatTeamfooter input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-left:70px;
+  width: 800px;
+  background-color: #f8f8f8;
+}
+
+.chatTeamfooter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0d075e;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 900px;
+    margin-top: -60px;
+
+    &:hover {
+      background-color: #0a705e;
+    }
+  
+}
+
+.chatTeamfooter button:hover {
+  background-color: #13a094;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #686666;
+  position: absolute;
+  bottom: 4px;  /* Ajustez selon vos besoins */
+  right: 10px;   /* Ajustez selon vos besoins */
+}
+.titreTeam{
+  margin-left: -210px;
+  font-size: large;
+}

@@ -1,0 +1,270 @@
+/* Team.scss */
+
+.team-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+  width: 900px;
+  margin-bottom: 50px;
+
+}
+
+.teamtitle {
+  text-align: center;
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.team-title, .team-id {
+  font-size: 18px;
+  color: #000000;
+  margin: 10px 0;
+}
+
+.members-supervisor {
+  margin-top: 20px;
+}
+
+.members-supervisor-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.teamtable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.teamtable th, .teamtable td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.teamtable th {
+  background-color: #080952;
+  color: white;
+  font-weight: bold;
+}
+
+.teamtable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.quitbutton {
+  background-color: #e21c15;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-left: -50px;
+  margin-right: 150px;
+  
+}
+
+.quitbutton:hover {
+  background-color: #d32f2f;
+}
+.EditTeamBtn{
+  background-color: #25ee25;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  
+
+}
+
+.team-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.team-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.team-form h3 {
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.team-form label {
+  display: block;
+  margin-bottom: 15px;
+  color: #000000;
+  font-weight: 800;
+
+}
+
+.team-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.team-form input:hover{
+  border-color: #25ee25;
+}
+
+#submitButton {
+  background-color: #51da3f;
+}
+#submitButton:hover {
+  background-color: #3bbd2a;
+}
+
+#closeBtn {
+  background-color: #ffffff00;
+  float: right;
+  color: #000000;
+  margin-left: 188px;
+  margin-top: -15px;
+  width: 420px;
+  
+}
+
+#closeBtn:hover {
+  color: #d32f2f;
+}
+
+.errormsg {
+  color: #030303;
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.editprjtitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #050505;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .team-container {
+    padding: 15px;
+  }
+
+  .team-form {
+    width: 90%;
+  }
+
+  .teamtable th, .teamtable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+
+.quitterGroupe{
+  padding-right: 10px;
+}
+.editGroupe{
+  padding-right: 10px;
+}
+
+
+.modalQuitoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fond sombre avec transparence */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalQuitcontent {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 400px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modalQuitcontent h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #0a0a0a;
+}
+
+.modalQuitbuttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.actionQuitbutton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.confirmQuitbutton {
+  background-color: #d9534f;
+  color: white;
+  margin-left: 60px;
+}
+
+.confirmQuitbutton:hover {
+  background-color: #c9302c;
+}
+
+.cancelQuitbutton {
+  background-color: #066077;
+  color: white;
+  margin-right: 60px;
+}
+
+.cancelQuitbutton:hover {
+  background-color: #31b0d5;
+}
+

@@ -1,0 +1,131 @@
+.my-teams-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .teamtitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #190768;
+  }
+  
+  .teamtitle2{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+  }
+  
+  .myteam-container {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  // Couleurs alternatives pour les équipes
+  .myteam-container:nth-child(odd) {
+    background-color: #f5e2fc; // Couleur de fond claire pour les équipes impaires
+  }
+  
+  .myteam-container:nth-child(even) {
+    background-color: #e1dbf8; // Couleur de fond claire pour les équipes paires
+  }
+  
+  .interns-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .interns-table th, .interns-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .interns-table th {
+    background-color: #070905;
+  }
+  
+  .interns-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .interns-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  
+  .assign-project-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .toggle-icon {
+    font-size: 1.2rem;
+    color: rgb(101, 14, 242);
+  }
+  #toggle-icon-quiter{
+    color : red;
+  }
+  .assign-project-overlay {
+    position: fixed; /* Fixe le formulaire à l'écran */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Assure que le formulaire est au-dessus du contenu */
+  }
+  
+  .assign-project-container {
+    background: white; /* Fond du formulaire */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les éléments */
+  }
+  
+  .assign-project-container select,
+  .assign-project-container button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%; /* Prend toute la largeur disponible */
+  }
+  
+  .assign-project-container select {
+    background: #f9f9f9;
+  }
+  
+  .assign-project-container button {
+    background: #007bff; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .assign-project-container button:hover {
+    background: #0056b3; /* Couleur de fond du bouton au survol */
+  }
+  #close-button{
+    background-color: rgb(255, 255, 255);
+    width: 2rem;
+    margin-left: 33rem;
+    font-size: 1.3rem;
+  }
